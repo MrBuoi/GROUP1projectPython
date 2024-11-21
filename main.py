@@ -28,47 +28,47 @@ def main():
         st.session_state['is_logged_in'] = False
         st.session_state['username'] = ''
     # Menu lựa chọn giữa Đăng nhập và Đăng Ký
-    menu = ["Đăng Nhập", "Đăng Ký", "Liên Hệ"]
+    menu = ["Sign In", "Sign Up", "Contact"]
     option = st.sidebar.selectbox("User Account", menu)
     if not st.session_state['is_logged_in']:
         background11()
-        if option == "Đăng Nhập":
+        if option == "Sign In":
             if login():
                 st.session_state.is_logged_in = True
-        elif option == "Đăng Ký":
+        elif option == "Sign Up":
             register()
-        elif option == "Liên Hệ":
+        elif option == "Contact":
             none()
             contact()
     else:
         # Hiển thị menu chính khi đã đăng nhập
-        st.sidebar.success(f"Đã đăng nhập: {st.session_state['username']}")
+        st.sidebar.success(f"Welcome: {st.session_state['username']}!")
         # Tạo menu chính
         main_menu = st.sidebar.selectbox(
             "Menu",
-            ["Giới Thiệu Ứng Dụng", "Hướng dẫn sử dụng", "Công Cụ Học Tập", "About Us","Contact Us"]
+            ["Introduction", "Instructions", "Tools", "About Us","Contact Us"]
         )
-        if main_menu == "Giới Thiệu Ứng Dụng":
+        if main_menu == "Introduction":
             none()
             introduction()
-        elif main_menu == "Hướng dẫn sử dụng":
+        elif main_menu == "Instructions":
             instruction_of_use()
-        elif main_menu == "Công Cụ Học Tập":
+        elif main_menu == "Tools":
             # Menu công cụ học tập
             sub_menu = st.sidebar.selectbox(
-                "Các Công Cụ Chính",
-                ["Phương Pháp Pomodoro","Thống Kê Thời Gian Tập Trung Học", "Quản lý Thời gian biểu", "Ma trận Eisenhower"]
+                "Tools",
+                ["Pomodoro Method","Study Report", "Timetable Management", "Eisenhower Matrix"]
             )
-            if sub_menu == "Phương Pháp Pomodoro":
+            if sub_menu == "Pomodoro Method":
                 B()
                 display_pomodoro()
-            elif sub_menu == "Thống Kê Thời Gian Tập Trung Học":
+            elif sub_menu == "Study Report":
                 A()
                 report_display()
-            elif sub_menu == "Quản lý Thời gian biểu":
+            elif sub_menu == "Timetable Management":
                 background5()
                 display_schedule(st.session_state['username'])
-            elif sub_menu == "Ma trận Eisenhower":
+            elif sub_menu == "Eisenhower Matrix":
                 hesen_background()
                 display_eisenhower_matrix(st.session_state['username'])
         elif main_menu == "About Us":
@@ -77,10 +77,10 @@ def main():
         elif main_menu == "Contact Us":
             none()
             contact()
-        if st.sidebar.button("Đăng xuất"):
+        if st.sidebar.button("Log Out"):
             st.session_state['is_logged_in'] = False
             st.session_state['username'] = ''
-            st.toast('Đăng xuất thành công')
+            st.toast('Log Out Successfully')
             st.rerun()
 if __name__ == "__main__":
     main()
