@@ -5,8 +5,10 @@ from src.schedule.scheduler import add_schedule, get_schedule, delete_schedule
 
 
 def display_schedule(username):
-    st.header("Quản lý Thời gian biểu")
-
+    st.markdown(
+        "<h1 style='text-align: center; font-size: 80px;'>Quản lý Thời gian biểu</h1>",
+        unsafe_allow_html=True
+    )
 
     # Form thêm thời gian biểu mới
     with st.form("add_schedule_form"):
@@ -27,7 +29,10 @@ def display_schedule(username):
 
 
     # Hiển thị lịch trình
-    st.subheader("Lịch trình")
+    st.markdown(
+        "<h1 style='text-align: center; font-size: 80px;'>Lịch trình</h1>",
+        unsafe_allow_html=True
+    )
     view_date = st.date_input("Chọn ngày để xem lịch trình", value=datetime.today())
     days = st.slider("Số ngày muốn xem", 1, 7, 1)
     sort_by = st.radio("Sắp xếp theo", options=["Thời gian", "Mức độ khẩn cấp", "Mức độ quan trọng"], index=0)
