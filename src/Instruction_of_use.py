@@ -15,7 +15,7 @@ def load_lottieurl(url):
 def instruction_of_use():
     st.header("⭐️Hướng Dẫn Sử Dụng Ứng Dụng Quản Lý Thời Gian và Lịch Trình")
 
-    quanly = st.selectbox("",['Đăng nhập và Đăng ký', 'Bảng lịch trình thời gian biểu', 'Đồng hồ Pomodoro','Sử dụng ma trận Eisenhower'])
+    quanly = st.selectbox("",['Đăng nhập và Đăng ký', 'Bảng lịch trình thời gian biểu', 'Đồng hồ Pomodoro','Sử dụng ma trận Eisenhower','Thống kê thời gian tập trung học'])
     if quanly == 'Đăng nhập và Đăng ký':
         background63()
         st.write("""Hãy chọn "Đăng Nhập" nếu bạn đã có tài khoản trên ứng dụng hoặc chọn "Đăng Ký" nếu bạn chưa có tài khoản.""")
@@ -38,7 +38,9 @@ def instruction_of_use():
         def eisenhower():
             webbrowser.open_new_tab("https://gobranding.com.vn/ma-tran-eisenhower-la-gi/")
         st.button("Click it!",on_click= eisenhower)
-        
+    elif quanly == 'Thống kê thời gian tập trung học':
+        background63()
+        st.write("""Sau mỗi Pomodoro thì số phút bạn đã học được sẽ cộng vào với nhau, sau đó kết quả cuối cùng là số phút mà bạn đã học được trong ngày hôm ấy. Người dùng cũng có thể so sánh số phút học tập trung trong ngày so với ngày trước đã học""")
     
     # URL của hoạt hình Lottie thứ nhất
     #lottie_url1 = "https://assets2.lottiefiles.com/packages/lf20_touohxv0.json"
