@@ -460,7 +460,7 @@ def A():
         return encoded
     current_dir = os.path.dirname(os.path.abspath(__file__))
     assets_dir = os.path.join(current_dir, 'assets')
-    img5_path = os.path.join(assets_dir, 'A.png')
+    img5_path = os.path.join(assets_dir, 'D.png')
     img5 = get_img_as_base64(img5_path)
     # CSS tùy chỉnh cho nền và sidebar
     page_bg_img = f"""

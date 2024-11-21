@@ -70,7 +70,7 @@ def report_display():
             dates = list(sorted_data.keys())
             durations = list(sorted_data.values())
             # Vẽ biểu đồ bằng matplotlib
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(7, 3))
             ax.bar(dates, durations, color='skyblue')
             ax.set_xlabel('Ngày')
             ax.set_ylabel('Thời gian học (phút)')

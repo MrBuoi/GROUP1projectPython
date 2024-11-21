@@ -106,7 +106,7 @@ def render_about_us():
             "<h1 style='text-align: center; font-size: 20px;'>TRỊNH MINH HIẾU</h1>",
             unsafe_allow_html=True
         )
-        st.markdown("Thành công là khi bạn hài lòng với sự tiến bộ của chính mình!")
+        st.markdown("Tôi thích con mèo!!!!!!!!!")
         st.write("Email : trinhhieu231205@gmail.com")
     st.markdown("---")
     # Hiển thị tiêu đề

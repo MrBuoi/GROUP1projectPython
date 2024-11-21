@@ -81,7 +81,7 @@ def display_pomodoro():
                     f"<h1 style='text-align: center; font-size: 200px;'>{mins:02d}:{secs:02d}</h1>",
                     unsafe_allow_html=True
                 )
-                time.sleep(0.1)
+                time.sleep(1)
                 t1 -= 1
             st.success("🔔 25 phút đã kết thúc! Nghỉ giải lao chút nào!")
 
