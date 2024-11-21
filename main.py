@@ -17,6 +17,7 @@ from src.Instruction_of_use import instruction_of_use
 from src.schedule.Eisenhower import display_eisenhower_matrix  # Import hàm Eisenhower
 from About_Us import render_about_us
 from src.pomodoro.pomodoro_report import report_display
+from src.Contact_Us import contact
 from style import css_full_app
 from style import hesen_background
 from style import pmdr_background
@@ -44,7 +45,7 @@ def main():
         st.session_state['is_logged_in'] = False
         st.session_state['username'] = ''
     # Menu lựa chọn giữa Đăng nhập và Đăng Ký
-    menu = ["Đăng Nhập", "Đăng Ký"]
+    menu = ["Đăng Nhập", "Đăng Ký", "Liên Hệ"]
     option = st.sidebar.selectbox("User Account", menu)
     if not st.session_state['is_logged_in']:
         background11()
@@ -53,13 +54,16 @@ def main():
                 st.session_state.is_logged_in = True
         elif option == "Đăng Ký":
             register()
+        elif option == "Liên Hệ":
+            none()
+            contact()
     else:
         # Hiển thị menu chính khi đã đăng nhập
         st.sidebar.success(f"Đã đăng nhập: {st.session_state['username']}")
         # Tạo menu chính
         main_menu = st.sidebar.selectbox(
             "Menu",
-            ["Giới Thiệu Ứng Dụng", "Hướng dẫn sử dụng", "Công Cụ Học Tập", "About Us"]
+            ["Giới Thiệu Ứng Dụng", "Hướng dẫn sử dụng", "Công Cụ Học Tập", "About Us","Contact Us"]
         )
         if main_menu == "Giới Thiệu Ứng Dụng":
             none()
@@ -87,6 +91,9 @@ def main():
         elif main_menu == "About Us":
             none()
             render_about_us()
+        elif main_menu == "Contact Us":
+            none()
+            contact()
         if st.sidebar.button("Đăng xuất"):
             st.session_state['is_logged_in'] = False
             st.session_state['username'] = ''

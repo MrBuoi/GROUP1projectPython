@@ -34,11 +34,13 @@ def render_about_us():
     Huong = get_img_as_base64(img_path6)
     Hieu = get_img_as_base64(img_path7)
     ThayLong = get_img_as_base64(img_path8)
+    st.markdown("---")
     st.markdown(
         "<h1 style='text-align: center; font-size: 80px;'>⚡️About Us⚡️</h1>",
         unsafe_allow_html=True
     )
     st.markdown("####   Từ 7 thành viên được thầy Long chia team một cách ngẫu nhiên, mỗi thành viên với những tính cách khác nhau, những kinh nghiệm khác nhau đã cùng nhau nỗ lực hoàn thành một sản phẩm chỉn chu nhất, với mong muốn lớn nhất là cải thiện khả năng lập trình, tiến tới bài thi kết thúc học phần; đồng thời vận dụng những kiến thức trong chương trình học vào các dự án thực tế, nhằm làm quen với công việc tương lai. Kết quả đạt được của sản phẩm là kết tinh của sự tâm huyết, của những đêm không ngủ, những buổi họp thật dài và những niềm tin về một kết quả xứng đáng!!!")
+    st.markdown("---")
     # Hiển thị tiêu đề
     st.markdown(
         "<h1 style='text-align: center; font-size: 80px;'>✨ Meet Our Astronaut ✨</h1>",
@@ -97,7 +99,7 @@ def render_about_us():
             unsafe_allow_html=True
         )
         st.markdown("Thời sinh viên không phải là đường đua, mà là hành trình khám phá!")
-        st.write("Email : lelanhuonghihi@gmail.com")
+        st.write("Email : lelanhuong22092005@gmail.com")
     with col7:
         st.image(f"data:image/png;base64,{Hieu}", use_container_width=True)
         st.markdown(
@@ -106,6 +108,7 @@ def render_about_us():
         )
         st.markdown("Thành công là khi bạn hài lòng với sự tiến bộ của chính mình!")
         st.write("Email : trinhhieu231205@gmail.com")
+    st.markdown("---")
     # Hiển thị tiêu đề
     st.markdown(
         "<h1 style='text-align: center; font-size: 80px;'>✨Our Instructor✨</h1>",
@@ -121,3 +124,4 @@ def render_about_us():
             "<h1 style='text-align: center; font-size: 20px;'>TS. NGUYỄN TUẤN LONG</h1>",
             unsafe_allow_html=True
         )
+    st.markdown("---")
