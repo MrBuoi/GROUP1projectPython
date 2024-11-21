@@ -59,7 +59,7 @@ def main():
         # Tạo menu chính
         main_menu = st.sidebar.selectbox(
             "Menu",
-            ["Giới Thiệu Ứng Dụng", "Hướng dẫn sử dụng", "Công Cụ Học Tập", "AboutUs"]
+            ["Giới Thiệu Ứng Dụng", "Hướng dẫn sử dụng", "Công Cụ Học Tập", "About Us"]
         )
         if main_menu == "Giới Thiệu Ứng Dụng":
             none()
@@ -84,7 +84,7 @@ def main():
             elif sub_menu == "Ma trận Eisenhower":
                 hesen_background()
                 display_eisenhower_matrix(st.session_state['username'])
-        elif main_menu == "AboutUs":
+        elif main_menu == "About Us":
             none()
             render_about_us()
         if st.sidebar.button("Đăng xuất"):
