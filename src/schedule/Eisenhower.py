@@ -44,7 +44,7 @@ def display_eisenhower_matrix(username):
         return
     df = pd.DataFrame(data)
     # Tạo biểu đồ scatter
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(7, 3))
     # Tạo một danh sách để lưu thông tin cho legend
     legend_labels = []
     # Vẽ scatter plot
@@ -60,7 +60,6 @@ def display_eisenhower_matrix(username):
     plt.axvline(x=500, color='red', linestyle='--')
     plt.axhline(y=500, color='red', linestyle='--')
     # Thêm title và labels
-    plt.title('Eisenhower Matrix')
     plt.xlabel('Mức độ khẩn cấp')
     plt.ylabel('Mức độ quan trọng')
     plt.grid(False)

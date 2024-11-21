@@ -1,4 +1,28 @@
 import streamlit as st
+import json
+from pathlib import Path
+
+# Đường dẫn tới file lưu phản hồi
+feedback_file_path = Path("src/database/feed_back.json")
+
+# Hàm lưu phản hồi vào file JSON
+def save_feedback(email, feedback):
+    # Kiểm tra và tạo file nếu chưa tồn tại
+    if not feedback_file_path.exists():
+        feedback_file_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(feedback_file_path, "w") as file:
+            json.dump({}, file, indent=4)
+    
+    # Đọc dữ liệu hiện tại từ file
+    with open(feedback_file_path, "r") as file:
+        data = json.load(file)
+    
+    # Thêm phản hồi mới
+    data[email] = feedback
+    
+    # Ghi lại dữ liệu vào file
+    with open(feedback_file_path, "w") as file:
+        json.dump(data, file, indent=4)
 
 # Khởi tạo trạng thái session state
 if "submitted" not in st.session_state:
@@ -26,14 +50,15 @@ def contact():
                 st.session_state["submitted"] = True
                 st.session_state["name"] = name
                 st.session_state["email"] = email
+
+                # Lưu phản hồi vào file JSON
+                save_feedback(email, message)
+
+                st.success(f"Cảm ơn {st.session_state['name']}! Tin nhắn của bạn đã được gửi. Chúng tôi sẽ liên hệ qua email: {st.session_state['email']}.")
             else:
                 st.error("Vui lòng điền đầy đủ thông tin trước khi gửi!")
 
-    # Hiển thị thông báo nếu form đã được gửi
-    if st.session_state["submitted"]:
-        st.success(f"Cảm ơn {st.session_state['name']}! Tin nhắn của bạn đã được gửi. Chúng tôi sẽ liên hệ qua email: {st.session_state['email']}.")
 
-# Gọi hàm khi trang được load
     st.markdown("## ❗️Nếu bạn có bất kỳ câu hỏi hoặc cần hỗ trợ, xin vui lòng liên hệ với chúng tôi qua Hotline : 0886619869❗️")
     # Footer
     st.markdown("---")

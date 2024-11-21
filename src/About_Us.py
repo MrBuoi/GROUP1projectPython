@@ -14,7 +14,7 @@ def get_img_as_base64(file):
 def render_about_us():
     # Đường dẫn tới thư mục assets và file ảnh
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    assets_dir = os.path.join(current_dir, "assets")
+    assets_dir = os.path.join(current_dir, "../assets")
 
     # File ảnh
     img_path1 = os.path.join(assets_dir, "Tuan.png")

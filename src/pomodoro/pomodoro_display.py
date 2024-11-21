@@ -1,10 +1,8 @@
 import streamlit as st
 import time
-import os
 import requests
 from pathlib import Path
 from streamlit_lottie import st_lottie
-from style import pmdr_background
 import datetime
 import json
 

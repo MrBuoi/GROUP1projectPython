@@ -1,6 +1,5 @@
 import json
 import os
-import bcrypt
 
 
 # Đường dẫn đầy đủ tới file users.json trong thư mục database

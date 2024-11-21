@@ -1,26 +1,15 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
-import pandas as pd
-import hashlib
-import os
-from pathlib import Path
-import base64
-import plotly.express as px
-from streamlit_lottie import st_lottie
-import requests
-import streamlit.components.v1 as components
 from src.auth.auth import login, register
 from src.schedule.schedule_display import display_schedule
 from src.pomodoro.pomodoro_display import display_pomodoro
 from src.Introduction import introduction
 from src.Instruction_of_use import instruction_of_use
 from src.schedule.Eisenhower import display_eisenhower_matrix  # Import hàm Eisenhower
-from About_Us import render_about_us
+from src.About_Us import render_about_us
 from src.pomodoro.pomodoro_report import report_display
 from src.Contact_Us import contact
 from style import css_full_app
 from style import hesen_background
-from style import pmdr_background
 from style import background5
 from style import background11
 from style import none

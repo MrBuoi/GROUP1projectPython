@@ -54,6 +54,13 @@ def register():
         if len(password) < 8:
             st.error("Mật khẩu phải chứa ít nhất 8 ký tự.")
             return
+        if not re.search(r'[a-z]', password):
+            st.error("Mật khẩu phải chứa ít nhất 1 chữ cái in thường")
+        if not re.search(r'[0-9]', password):
+            st.error("Mật khẩu phải chứa ít nhất 1 chữ số")
+        if not re.search(r'[A-Z]', password):
+            st.error("Mật khẩu phải chứa ít nhất 1 chữ cái in hoa")
+        
         if not re.search(r'[^a-zA-Z0-9]', password):
             st.error("Mật khẩu phải chứa ít nhất 1 ký tự đặc biệt.")
             return

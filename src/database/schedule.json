@@ -148,14 +148,41 @@
         }
     },
     "A": {
-        "1": {
-            "title": "helo",
-            "start_time": "01:31",
-            "end_time": "01:31",
+        "2": {
+            "title": "Ho\u00e0n Th\u00e0nh D\u1ef1 \u00c1n Python",
+            "start_time": "06:15",
+            "end_time": "18:30",
             "date": "2024-11-22",
-            "urgency": 500,
-            "importance": 500,
-            "note": ""
+            "urgency": 929,
+            "importance": 865,
+            "note": "D\u1ef1 \u00c1n l\u1ea5y \u0111i\u1ec3m 40%"
+        },
+        "3": {
+            "title": "\u0110i \u0111\u00e1 b\u00f3ng",
+            "start_time": "06:15",
+            "end_time": "18:30",
+            "date": "2024-11-22",
+            "urgency": 79,
+            "importance": 83,
+            "note": "Mang gi\u00e0y v\u00e0 t\u1ea5t d\u00e0i"
+        },
+        "4": {
+            "title": "\u0110i xem phim",
+            "start_time": "06:15",
+            "end_time": "18:30",
+            "date": "2024-11-22",
+            "urgency": 209,
+            "importance": 380,
+            "note": "Mang theo ng\u01b0\u1eddi y\u00eau"
+        },
+        "5": {
+            "title": "\u0102n c\u01a1m",
+            "start_time": "02:15",
+            "end_time": "02:15",
+            "date": "2024-11-22",
+            "urgency": 244,
+            "importance": 767,
+            "note": "Nh\u1edb c\u1ea7m \u0111\u0169a"
         }
     }
 }
