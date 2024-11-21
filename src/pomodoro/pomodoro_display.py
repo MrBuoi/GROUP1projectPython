@@ -1,5 +1,3 @@
-
-
 import streamlit as st
 import time
 import os
@@ -8,15 +6,9 @@ from pathlib import Path
 from streamlit_lottie import st_lottie
 from style import pmdr_background
 import datetime
-import matplotlib.pyplot as plt
+import json
 
 
-# Dictionary to store study time
-if 'study_data' not in st.session_state:
-    st.session_state.study_data = {}
-
-
-# Hàm tải hoạt hình Lottie từ URL
 def load_lottieurl(url: str):
     response = requests.get(url)
     if response.status_code == 200:
@@ -26,14 +18,49 @@ def load_lottieurl(url: str):
         return None
 
 
-# URL của hoạt hình Lottie
 lottie_url1 = "https://assets2.lottiefiles.com/packages/lf20_touohxv0.json"
 lottie_url2 = "https://lottie.host/fcc5c4c9-c08c-460e-b991-5ab983ca4ad1/wwJITddgjD.json"
+
+
 
 
 # Tải hoạt hình
 lottie_json1 = load_lottieurl(lottie_url1)
 lottie_json2 = load_lottieurl(lottie_url2)
+
+
+# Đường dẫn tới file JSON
+database_path = Path("src/database/study_time.json")
+
+
+# Hàm tải dữ liệu từ file JSON
+def load_study_data():
+    if database_path.exists():
+        with open(database_path, "r") as file:
+            return json.load(file)
+    return {}
+
+
+# Hàm lưu dữ liệu vào file JSON
+def save_study_data(data):
+    with open(database_path, "w") as file:
+        json.dump(data, file, indent=4)
+
+
+# Hàm ghi nhận thời gian học
+def record_study_time(user, time_spent):
+    data = load_study_data()
+    today = datetime.date.today().strftime("%Y-%m-%d")
+    if user not in data:
+        data[user] = {}
+    if today in data[user]:
+        data[user][today] += time_spent
+    else:
+        data[user][today] = time_spent
+    save_study_data(data)
+    return data[user][today]
+
+
 
 
 def display_pomodoro():
@@ -45,8 +72,8 @@ def display_pomodoro():
 
 
     # Timer countdown
-    t1 = 25  # 25 minutes for focus
-    t2 = 5   # 5 minutes for break
+    t1 = 1500  # 25 minutes for focus
+    t2 = 300   # 5 minutes for break
 
 
     # Start Button
@@ -57,7 +84,6 @@ def display_pomodoro():
 
     # Countdown logic
     if button_clicked:
-        st.write("### Đang học...")
         with st.empty():
             while t1:
                 mins, secs = divmod(t1, 60)
@@ -65,22 +91,17 @@ def display_pomodoro():
                     f"<h1 style='text-align: center; font-size: 200px;'>{mins:02d}:{secs:02d}</h1>",
                     unsafe_allow_html=True
                 )
-                time.sleep(1)
+                time.sleep(0.001)
                 t1 -= 1
 
 
             st.success("🔔 25 phút đã kết thúc! Nghỉ giải lao chút nào!")
 
 
-            # Ghi nhận thời gian học vào dictionary
-            today = datetime.date.today().strftime("%Y-%m-%d")
-            if today in st.session_state.study_data:
-                st.session_state.study_data[today] += 25
-            else:
-                st.session_state.study_data[today] = 25
-
-
-            st.write(f"Thời gian học hôm nay: {st.session_state.study_data[today]} phút")
+            # Ghi nhận thời gian học vào file JSON
+            user = st.session_state['username']
+            total_today = record_study_time(user, 25)
+            st.write(f"Thời gian học hôm nay: {total_today} phút")
 
 
             placeholder = st.empty()
@@ -90,9 +111,9 @@ def display_pomodoro():
                     height=300,
                     key="lottie_25min_complete",
                 )
-                st.toast("🔔Chúc mừng bạn đã hoàn thành 25 phút Hãy nghỉ giải lao 5 phút nhé!")
-                time.sleep(4)  # Hiển thị trong 1 giây
-            placeholder.empty()  # Ẩn Lottie sau 1 giây
+                st.toast("🔔Chúc mừng bạn đã hoàn thành 25 phút! Hãy nghỉ giải lao 5 phút nhé!")
+                time.sleep(4)
+            placeholder.empty()
 
 
         with st.empty():
@@ -107,7 +128,6 @@ def display_pomodoro():
                 t2 -= 1
 
 
-            # Hiển thị hoạt hình Lottie khi hết 5 phút
             placeholder = st.empty()
             with placeholder:
                 st_lottie(
@@ -115,8 +135,8 @@ def display_pomodoro():
                     height=300,
                     key="lottie_5min_complete",
                 )
-                time.sleep(2)  # Hiển thị trong 1 giây
-            placeholder.empty()  # Ẩn Lottie sau 1 giây
+                time.sleep(2)
+            placeholder.empty()
 
 
             st.error("⏰ 5 phút giải lao đã kết thúc!")
@@ -154,31 +174,6 @@ def display_pomodoro():
         with open(audio_file_path, "rb") as audio_file:
             audio_bytes = audio_file.read()
             st.audio(audio_bytes, format="audio/mp3")
-
-
-    # Display daily study chart
-    if st.button("Xem biểu đồ thời gian học"):
-        if st.session_state.study_data:
-            dates = list(st.session_state.study_data.keys())
-            durations = list(st.session_state.study_data.values())
-
-
-            # Vẽ biểu đồ bằng matplotlib
-            fig, ax = plt.subplots()
-            ax.bar(dates, durations, color='skyblue')
-            ax.set_xlabel('Ngày')
-            ax.set_ylabel('Thời gian học (phút)')
-            ax.set_title('Thời gian học theo phương pháp Pomodoro mỗi ngày')
-            plt.xticks(rotation=45)
-            st.pyplot(fig)
-        else:
-            st.warning("Chưa có dữ liệu học để vẽ biểu đồ!")
-
-
-if __name__ == "__main__":
-    display_pomodoro()
-
-
 
 
 

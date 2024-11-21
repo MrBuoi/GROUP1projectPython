@@ -16,6 +16,7 @@ from src.Introduction import introduction
 from src.Instruction_of_use import instruction_of_use
 from src.schedule.Eisenhower import display_eisenhower_matrix  # Import hàm Eisenhower
 from About_Us import render_about_us
+from src.pomodoro.pomodoro_report import report_display
 from style import css_full_app
 from style import hesen_background
 from style import pmdr_background
@@ -69,11 +70,14 @@ def main():
             # Menu công cụ học tập
             sub_menu = st.sidebar.selectbox(
                 "Các Công Cụ Chính",
-                ["Phương Pháp Pomodoro", "Quản lý Thời gian biểu", "Ma trận Eisenhower"]
+                ["Phương Pháp Pomodoro","Thống Kê Thời Gian Tập Trung Học", "Quản lý Thời gian biểu", "Ma trận Eisenhower"]
             )
             if sub_menu == "Phương Pháp Pomodoro":
                 pmdr_background()
                 display_pomodoro()
+            elif sub_menu == "Thống Kê Thời Gian Tập Trung Học":
+                hesen_background()
+                report_display()
             elif sub_menu == "Quản lý Thời gian biểu":
                 background5()
                 display_schedule(st.session_state['username'])
