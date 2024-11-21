@@ -129,7 +129,7 @@ def display_pomodoro():
 
 
     # Music Section
-    st.markdown("### 🎵 Select Your Rhythm")
+    st.markdown("##  Select Your Rhythm")
 
 
     # Lấy đường dẫn hiện tại
