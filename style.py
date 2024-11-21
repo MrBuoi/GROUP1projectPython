@@ -174,7 +174,7 @@ def css_full_app():
     }   
     /* Hover effect for options */
     [data-baseweb="menu"] div[role="option"]:hover {
-        background-color: #06775F !important;
+        background-color: #BA4849 !important;
         color: white !important;
         width: 100% !important;
         margin: 0 !important;
@@ -182,12 +182,12 @@ def css_full_app():
     }    
     /* Selected option */
     [role="option"][aria-selected="true"] {
-        background-color: #06775F !important;
+        background-color: #BA4849 !important;
         width: 100% !important;
     }    
     /* Override any default hover styles */
     [data-baseweb="menu"] div[role="option"][data-highlighted="true"] {
-        background-color: #06775F !important;
+        background-color: #BA4849 !important;
         width: 100% !important;
     }   
     /* Remove any gaps or spaces */
@@ -626,6 +626,32 @@ def background66():
     current_dir = os.path.dirname(os.path.abspath(__file__))
     assets_dir = os.path.join(current_dir, 'assets')
     img5_path = os.path.join(assets_dir, '662.png')
+    img5 = get_img_as_base64(img5_path)
+    # CSS tùy chỉnh cho nền và sidebar
+    page_bg_img = f"""
+    <style>
+    [data-testid="stAppViewContainer"] {{
+        background-image: url("data:image/png;base64,{img5}");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: local;
+    }}
+    [data-testid="stHeader"] {{
+        background-color: rgba(0,0,0,0);
+    }}
+    </style>
+    """
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+def none():
+    @st.cache_data
+    def get_img_as_base64(file):
+        with open(file, "rb") as f:
+            data = f.read()
+        encoded = base64.b64encode(data).decode()
+        return encoded
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    assets_dir = os.path.join(current_dir, 'assets')
+    img5_path = os.path.join(assets_dir, 'none.png')
     img5 = get_img_as_base64(img5_path)
     # CSS tùy chỉnh cho nền và sidebar
     page_bg_img = f"""

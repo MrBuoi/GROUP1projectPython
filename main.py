@@ -15,6 +15,7 @@ from src.pomodoro.pomodoro_display import display_pomodoro
 from src.Introduction import introduction
 from src.Instruction_of_use import instruction_of_use
 from src.schedule.Eisenhower import display_eisenhower_matrix  # Import hàm Eisenhower
+from About_Us import render_about_us
 from style import css_full_app
 from style import hesen_background
 from style import pmdr_background
@@ -28,6 +29,7 @@ from style import background63
 from style import background64
 from style import background65
 from style import background66
+from style import none
 # Thiết lập cấu hình trang (gọi một lần)
 st.set_page_config(
     page_title="Quản Lý Thời Gian và Lịch Trình",
@@ -56,10 +58,10 @@ def main():
         # Tạo menu chính
         main_menu = st.sidebar.selectbox(
             "Menu",
-            ["Giới Thiệu Ứng Dụng", "Hướng dẫn sử dụng", "Công Cụ Học Tập"]
+            ["Giới Thiệu Ứng Dụng", "Hướng dẫn sử dụng", "Công Cụ Học Tập", "AboutUs"]
         )
         if main_menu == "Giới Thiệu Ứng Dụng":
-            background62()
+            none()
             introduction()
         elif main_menu == "Hướng dẫn sử dụng":
             instruction_of_use()
@@ -78,6 +80,9 @@ def main():
             elif sub_menu == "Ma trận Eisenhower":
                 hesen_background()
                 display_eisenhower_matrix(st.session_state['username'])
+        elif main_menu == "AboutUs":
+            none()
+            render_about_us()
         if st.sidebar.button("Đăng xuất"):
             st.session_state['is_logged_in'] = False
             st.session_state['username'] = ''
