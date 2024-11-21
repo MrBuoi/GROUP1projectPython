@@ -9,7 +9,10 @@ if "email" not in st.session_state:
     st.session_state["email"] = ""
 
 def contact():
-    st.subheader("📋 Form Liên hệ trực tuyến")
+    st.markdown(
+        "<h1 style='text-align: center; font-size: 80px;'>📋 Form Liên hệ trực tuyến</h1>",
+        unsafe_allow_html=True
+    )
     
     with st.form("contact_form"):
         name = st.text_input("Họ và Tên", placeholder="Nhập tên của bạn")

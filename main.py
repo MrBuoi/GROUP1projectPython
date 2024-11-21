@@ -21,17 +21,11 @@ from src.Contact_Us import contact
 from style import css_full_app
 from style import hesen_background
 from style import pmdr_background
-from style import background3
-from style import background4
 from style import background5
 from style import background11
-from style import background7
-from style import background62
-from style import background63
-from style import background64
-from style import background65
-from style import background66
 from style import none
+from style import A
+from style import B
 # Thiết lập cấu hình trang (gọi một lần)
 st.set_page_config(
     page_title="Quản Lý Thời Gian và Lịch Trình",
@@ -77,10 +71,10 @@ def main():
                 ["Phương Pháp Pomodoro","Thống Kê Thời Gian Tập Trung Học", "Quản lý Thời gian biểu", "Ma trận Eisenhower"]
             )
             if sub_menu == "Phương Pháp Pomodoro":
-                pmdr_background()
+                B()
                 display_pomodoro()
             elif sub_menu == "Thống Kê Thời Gian Tập Trung Học":
-                hesen_background()
+                A()
                 report_display()
             elif sub_menu == "Quản lý Thời gian biểu":
                 background5()

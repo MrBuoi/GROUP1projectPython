@@ -22,8 +22,6 @@ lottie_url1 = "https://assets2.lottiefiles.com/packages/lf20_touohxv0.json"
 lottie_url2 = "https://lottie.host/fcc5c4c9-c08c-460e-b991-5ab983ca4ad1/wwJITddgjD.json"
 
 
-
-
 # Tải hoạt hình
 lottie_json1 = load_lottieurl(lottie_url1)
 lottie_json2 = load_lottieurl(lottie_url2)
@@ -69,19 +67,13 @@ def display_pomodoro():
         "<h1 style='text-align: center; font-size: 80px;'>FOCUS ZONE</h1>",
         unsafe_allow_html=True
     )
-
-
     # Timer countdown
     t1 = 1500  # 25 minutes for focus
     t2 = 300   # 5 minutes for break
-
-
     # Start Button
     col1, col2, col3, cola, colb, colc, cold = st.columns([1, 1, 1, 1, 1, 1, 1])
     with cola:
         button_clicked = st.button("Start")
-
-
     # Countdown logic
     if button_clicked:
         with st.empty():
@@ -91,10 +83,8 @@ def display_pomodoro():
                     f"<h1 style='text-align: center; font-size: 200px;'>{mins:02d}:{secs:02d}</h1>",
                     unsafe_allow_html=True
                 )
-                time.sleep(0.001)
+                time.sleep(0.1)
                 t1 -= 1
-
-
             st.success("🔔 25 phút đã kết thúc! Nghỉ giải lao chút nào!")
 
 
@@ -137,8 +127,6 @@ def display_pomodoro():
                 )
                 time.sleep(2)
             placeholder.empty()
-
-
             st.error("⏰ 5 phút giải lao đã kết thúc!")
 
 
@@ -174,8 +162,3 @@ def display_pomodoro():
         with open(audio_file_path, "rb") as audio_file:
             audio_bytes = audio_file.read()
             st.audio(audio_bytes, format="audio/mp3")
-
-
-
-
-

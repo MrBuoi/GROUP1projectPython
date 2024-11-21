@@ -53,7 +53,10 @@ def report_display():
     study_data = data.get(user, {})
     if study_data:
         # Tùy chọn khoảng thời gian
-        st.markdown("### Lựa chọn khoảng thời gian:")
+        st.markdown(
+        "<h1 style='text-align: center; font-size: 80px;'>Lựa chọn khoảng thời gian</h1>",
+        unsafe_allow_html=True
+    )
         option = st.radio("Khoảng thời gian:", ["7 ngày", "1 tháng", "Tất cả"])
         if option == "7 ngày":
             filtered_data = filter_data_by_date_range(study_data, days=7)

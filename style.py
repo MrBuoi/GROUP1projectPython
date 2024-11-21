@@ -68,7 +68,7 @@ def css_full_app():
     }}
     </style>
     """, unsafe_allow_html=True)
-# CSS tùy chỉnh để tạo hiệu ứng hover với animation cho sidebar
+    # CSS tùy chỉnh để tạo hiệu ứng hover với animation cho sidebar
     st.markdown("""
     <style>
     /* Nền của sidebar */
@@ -337,7 +337,7 @@ def pmdr_background():
         return encoded
     current_dir = os.path.dirname(os.path.abspath(__file__))
     assets_dir = os.path.join(current_dir, 'assets')
-    img5_path = os.path.join(assets_dir, '2.png')
+    img5_path = os.path.join(assets_dir, 'pmdr.png')
     img5 = get_img_as_base64(img5_path)
     # CSS tùy chỉnh cho nền và sidebar
     page_bg_img = f"""
@@ -652,6 +652,58 @@ def none():
     current_dir = os.path.dirname(os.path.abspath(__file__))
     assets_dir = os.path.join(current_dir, 'assets')
     img5_path = os.path.join(assets_dir, 'none.png')
+    img5 = get_img_as_base64(img5_path)
+    # CSS tùy chỉnh cho nền và sidebar
+    page_bg_img = f"""
+    <style>
+    [data-testid="stAppViewContainer"] {{
+        background-image: url("data:image/png;base64,{img5}");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: local;
+    }}
+    [data-testid="stHeader"] {{
+        background-color: rgba(0,0,0,0);
+    }}
+    </style>
+    """
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+def A():
+    @st.cache_data
+    def get_img_as_base64(file):
+        with open(file, "rb") as f:
+            data = f.read()
+        encoded = base64.b64encode(data).decode()
+        return encoded
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    assets_dir = os.path.join(current_dir, 'assets')
+    img5_path = os.path.join(assets_dir, 'A.png')
+    img5 = get_img_as_base64(img5_path)
+    # CSS tùy chỉnh cho nền và sidebar
+    page_bg_img = f"""
+    <style>
+    [data-testid="stAppViewContainer"] {{
+        background-image: url("data:image/png;base64,{img5}");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: local;
+    }}
+    [data-testid="stHeader"] {{
+        background-color: rgba(0,0,0,0);
+    }}
+    </style>
+    """
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+def B():
+    @st.cache_data
+    def get_img_as_base64(file):
+        with open(file, "rb") as f:
+            data = f.read()
+        encoded = base64.b64encode(data).decode()
+        return encoded
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    assets_dir = os.path.join(current_dir, 'assets')
+    img5_path = os.path.join(assets_dir, 'B.png')
     img5 = get_img_as_base64(img5_path)
     # CSS tùy chỉnh cho nền và sidebar
     page_bg_img = f"""
