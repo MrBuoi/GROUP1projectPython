@@ -454,3 +454,48 @@ def B():
     </style>
     """
     st.markdown(page_bg_img, unsafe_allow_html=True)
+def css_timetable():
+    st.markdown(
+    """
+    <style>
+    label {
+        color: white !important;
+    }
+    textarea, .stTextInput, .stSlider label {
+        color: white !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+    st.markdown(
+    """
+    <style>
+    /* Thay đổi màu chữ nhãn */
+    label {
+        color: white !important;
+    }
+
+    /* Đổi màu chữ cho st.radio */
+    .stRadio > label {
+        color: white !important;
+        font-weight: bold;
+    }
+
+    /* Đổi màu cho tiêu đề và slider */
+    .stSlider > label {
+        color: white !important;
+    }
+
+    /* Đổi màu cho các input */
+    .stTextInput > label,
+    .stNumberInput > label,
+    .stDateInput > label,
+    .stTimeInput > label,
+    .stTextArea > label {
+        color: white !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)

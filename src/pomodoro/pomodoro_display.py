@@ -60,7 +60,7 @@ def record_study_time(user, time_spent):
 def display_pomodoro():
     # Main title
     st.markdown(
-        "<h1 style='text-align: center; font-size: 80px;'>FOCUS ZONE</h1>",
+        "<h1 style='color: white; text-align: center; font-size: 80px;'> FOCUS ZONE</h1>",
         unsafe_allow_html=True
     )
     # Timer countdown
@@ -76,7 +76,7 @@ def display_pomodoro():
             while t1:
                 mins, secs = divmod(t1, 60)
                 st.markdown(
-                    f"<h1 style='text-align: center; font-size: 200px;'>{mins:02d}:{secs:02d}</h1>",
+                    f"<h1 style='color: white; text-align: center; font-size: 200px;'>{mins:02d}:{secs:02d}</h1>",
                     unsafe_allow_html=True
                 )
                 time.sleep(1)
@@ -107,7 +107,7 @@ def display_pomodoro():
             while t2:
                 mins, secs = divmod(t2, 60)
                 st.markdown(
-                    f"<h1 style='text-align: center; font-size: 200px;'>{mins:02d}:{secs:02d}</h1>",
+                    f"<h1 style='color: white; text-align: center; font-size: 200px;'>{mins:02d}:{secs:02d}</h1>",
                     unsafe_allow_html=True
                 )
                 time.sleep(1)
@@ -127,10 +127,10 @@ def display_pomodoro():
 
 
     # Music Section
-    st.markdown("##  Select Your Rhythm")
-
-
-    
+    st.markdown(
+        "<h1 style='color: white; font-size: 36px;'> Select Your Rhythm</h1>",
+        unsafe_allow_html=True
+    )
     current_dir = Path(__file__).parent # Lấy đường dẫn hiện tại
     assets_dir = current_dir / '../../assets' #Xác định thư mục assets
     assets_dir = assets_dir.resolve()   # Chuyển thành đường dẫn tuyệt đối

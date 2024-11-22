@@ -54,7 +54,7 @@ def report_display():
     if study_data:
         # Tùy chọn khoảng thời gian
         st.markdown(
-        "<h1 style='text-align: center; font-size: 80px;'>Lựa chọn khoảng thời gian</h1>",
+        "<h1 style='color: white; text-align: center; font-size: 80px;'>Lựa chọn khoảng thời gian</h1>",
         unsafe_allow_html=True
     )
         option = st.radio("Khoảng thời gian:", ["7 ngày", "1 tháng", "Tất cả"])
