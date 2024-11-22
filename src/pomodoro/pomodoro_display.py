@@ -60,7 +60,7 @@ def record_study_time(user, time_spent):
 def display_pomodoro():
     # Main title
     st.markdown(
-        "<h1 style='color: white; text-align: center; font-size: 80px;'> FOCUS ZONE</h1>",
+        "<h1 style='color: yellow; text-align: center; font-size: 80px;'> FOCUS ZONE</h1>",
         unsafe_allow_html=True
     )
     # Timer countdown
