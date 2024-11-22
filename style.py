@@ -392,9 +392,10 @@ def none():
     <style>
     [data-testid="stAppViewContainer"] {{
         background-image: url("data:image/png;base64,{img5}");
-        background-size: 100%;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        background-attachment: local;
+        background-attachment: fixed;
     }}
     [data-testid="stHeader"] {{
         background-color: rgba(0,0,0,0);
