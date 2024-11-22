@@ -207,9 +207,10 @@ def hesen_background():
     <style>
     [data-testid="stAppViewContainer"] {{
         background-image: url("data:image/png;base64,{img5}");
-        background-size: 100%;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        background-attachment: local;
+        background-attachment: fixed;
         color: black;
     }}
     [data-testid="stHeader"] {{
@@ -234,9 +235,10 @@ def background5():
     <style>
     [data-testid="stAppViewContainer"] {{
         background-image: url("data:image/png;base64,{img5}");
-        background-size: 100%;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        background-attachment: local;
+        background-attachment: fixed;
     }}
     [data-testid="stHeader"] {{
         background-color: rgba(0,0,0,0);
@@ -262,9 +264,10 @@ def background11():
     <style>
     [data-testid="stAppViewContainer"] {{
         background-image: url("data:image/png;base64,{img5}");
-        background-size: 100%;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        background-attachment: local;
+        background-attachment: fixed;
     }}
     [data-testid="stHeader"] {{
         background-color: rgba(0,0,0,0);
@@ -315,9 +318,10 @@ def background64():
     <style>
     [data-testid="stAppViewContainer"] {{
         background-image: url("data:image/png;base64,{img5}");
-        background-size: 100%;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        background-attachment: local;
+        background-attachment: fixed;
     }}
     [data-testid="stHeader"] {{
         background-color: rgba(0,0,0,0);
@@ -341,9 +345,10 @@ def background65():
     <style>
     [data-testid="stAppViewContainer"] {{
         background-image: url("data:image/png;base64,{img5}");
-        background-size: 100%;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        background-attachment: local;
+        background-attachment: fixed;
     }}
     [data-testid="stHeader"] {{
         background-color: rgba(0,0,0,0);
@@ -367,9 +372,10 @@ def background66():
     <style>
     [data-testid="stAppViewContainer"] {{
         background-image: url("data:image/png;base64,{img5}");
-        background-size: 100%;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        background-attachment: local;
+        background-attachment: fixed;
     }}
     [data-testid="stHeader"] {{
         background-color: rgba(0,0,0,0);
@@ -420,9 +426,10 @@ def A():
     <style>
     [data-testid="stAppViewContainer"] {{
         background-image: url("data:image/png;base64,{img5}");
-        background-size: 100%;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        background-attachment: local;
+        background-attachment: fixed;
     }}
     [data-testid="stHeader"] {{
         background-color: rgba(0,0,0,0);
@@ -446,9 +453,10 @@ def B():
     <style>
     [data-testid="stAppViewContainer"] {{
         background-image: url("data:image/png;base64,{img5}");
-        background-size: 100%;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        background-attachment: local;
+        background-attachment: fixed;
     }}
     [data-testid="stHeader"] {{
         background-color: rgba(0,0,0,0);
