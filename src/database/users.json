@@ -4,5 +4,11 @@
     },
     "bao": {
         "password": "$2b$12$VeGP.RMD0/4ABFLVcu3Vpu1Mp6u1L0ZZ29cp4o.TK8J6NNWCh28PK"
+    },
+    "Astronaut": {
+        "password": "$2b$12$UhcYYr2kLw8IXWr7oz8xTu9nDa0do0XSMySv14KX1pybHcoYf8ek."
+    },
+    "baodoan": {
+        "password": "$2b$12$mVQxuVYwwpkKy.H3BMKVG.CUlGKmKUfUdk9EEKLQLQXmPmlqJ9lUK"
     }
 }

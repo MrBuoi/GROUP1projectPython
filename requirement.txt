@@ -6,3 +6,4 @@ streamlit_lottie
 requests
 cryptography
 matplotlib
+bcrypt

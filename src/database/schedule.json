@@ -1,20 +1,12 @@
 {
     "A": {
-        "1": {
-            "title": "\u0111cc",
-            "end_time": "11:43",
+        "3": {
+            "title": "\u1eafn c\u01a1m",
+            "end_time": "13:28",
             "date": "2024-11-22",
-            "urgency": 500,
-            "importance": 500,
-            "note": "dd"
-        },
-        "2": {
-            "title": "nn",
-            "end_time": "12:38",
-            "date": "2024-11-22",
-            "urgency": 500,
-            "importance": 500,
-            "note": ""
+            "urgency": 744,
+            "importance": 230,
+            "note": "hello im tung"
         }
     }
 }
