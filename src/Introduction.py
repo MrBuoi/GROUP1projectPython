@@ -46,7 +46,7 @@ def introduction():
     st.markdown("---")
     
     with b:
-        st.image(f"data:image/png;base64,{VuTru}", use_container_width=True)
+        st.image(f"data:image/png;base64,{VuTru}")
         
     cola, colb, colc = st.columns(3)
     st.markdown(
