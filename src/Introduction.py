@@ -27,7 +27,7 @@ def introduction():
     a, b = st.columns(2)
     with a:
         st.markdown(
-        "<h1 style='text-align:; font-size: 80px;'>TIMELY </h1>",
+        "<h1 style='color: white; font-size: 80px;'>TIMELY </h1>",
         unsafe_allow_html=True
     )
         st.markdown("### Cỗ máy thời gian của những nhà khai phá vũ trụ")
