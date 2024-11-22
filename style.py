@@ -46,14 +46,6 @@ def css_full_app():
         transform: scale(0.98);
         box-shadow: 0px 2px 4px rgba(255, 102, 0, 0.2);
     }
-    /* Đặt màu nền và màu chữ cho toàn bộ ứng dụng */
-    body, .stApp {
-        color: black !important;
-    }
-    /* Đặt màu nền và màu chữ cho các phần tử văn bản */
-    .stMarkdown, .stTextInput, .stTextArea, .stSelectbox, .stMultiSelect, .stNumberInput, .stDateInput, .stTimeInput {
-        color: black !important;
-    }
     </style>
     """, unsafe_allow_html=True)
     
