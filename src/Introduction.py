@@ -194,7 +194,7 @@ def introduction():
     )
     a, b, c = st.columns(3)
     with b:
-        image3 = Image.open(r"assets/Ảnh cuối.PNG")
+        image3 = Image.open(r"assets/Ảnh cuối.png")
         st.image(image3)
         
  
