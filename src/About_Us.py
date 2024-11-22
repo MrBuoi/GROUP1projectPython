@@ -50,7 +50,7 @@ def render_about_us():
     # Hàng 1
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image(f"data:image/png;base64,{Tuan}", use_container_width=True)
+        st.image(f"data:image/png;base64,{Tuan}")
         st.markdown(
             "<h1 style='text-align: center; font-size: 20px;'>TRẦN ANH TUẤN</h1>",
             unsafe_allow_html=True
@@ -58,7 +58,7 @@ def render_about_us():
         st.markdown("Đừng sợ khác biệt, hãy là chính mình!")
         st.write("Email : trantuan1701ltv@gmail.com")
     with col2:
-        st.image(f"data:image/png;base64,{Bao}", use_container_width=True)
+        st.image(f"data:image/png;base64,{Bao}")
         st.markdown(
             "<h1 style='text-align: center; font-size: 20px;'>DOÃN QUỐC BẢO</h1>",
             unsafe_allow_html=True
@@ -66,7 +66,7 @@ def render_about_us():
         st.markdown("Hãy thất bại lớn trong những năm tháng này, để thành công lớn trong tương lai!")
         st.write("Email : doanquocbao030805@gmail.com")
     with col3:
-        st.image(f"data:image/png;base64,{Tung}", use_container_width=True)
+        st.image(f"data:image/png;base64,{Tung}")
         st.markdown(
             "<h1 style='text-align: center; font-size: 20px;'>VŨ BÙI ĐÌNH TÙNG</h1>",
             unsafe_allow_html=True
@@ -77,7 +77,7 @@ def render_about_us():
     # Hàng 2
     col4, col5, col6, col7 = st.columns(4)
     with col4:
-        st.image(f"data:image/png;base64,{Anh}", use_container_width=True)
+        st.image(f"data:image/png;base64,{Anh}")
         st.markdown(
             "<h1 style='text-align: center; font-size: 20px;'>PHẠM ĐỨC ANH</h1>",
             unsafe_allow_html=True
@@ -85,7 +85,7 @@ def render_about_us():
         st.markdown("Thời gian là vốn quý, hãy đầu tư cho tương lai!")
         st.write("Email : andypham85@gmail.com")
     with col5:
-        st.image(f"data:image/png;base64,{Giang}", use_container_width=True)
+        st.image(f"data:image/png;base64,{Giang}")
         st.markdown(
             "<h1 style='text-align: center; font-size: 20px;'>NGUYỄN HƯƠNG GIANG</h1>",
             unsafe_allow_html=True
@@ -93,7 +93,7 @@ def render_about_us():
         st.markdown("Thay vì chờ cơ hội đến, hãy tự tạo ra nó!")
         st.write("Email : nguyenthihuonggiang2005@gmail.com")
     with col6:
-        st.image(f"data:image/png;base64,{Huong}", use_container_width=True)
+        st.image(f"data:image/png;base64,{Huong}")
         st.markdown(
             "<h1 style='text-align: center; font-size: 20px;'>LÊ LAN HƯƠNG</h1>",
             unsafe_allow_html=True
@@ -101,7 +101,7 @@ def render_about_us():
         st.markdown("Thời sinh viên không phải là đường đua, mà là hành trình khám phá!")
         st.write("Email : lelanhuong22092005@gmail.com")
     with col7:
-        st.image(f"data:image/png;base64,{Hieu}", use_container_width=True)
+        st.image(f"data:image/png;base64,{Hieu}")
         st.markdown(
             "<h1 style='text-align: center; font-size: 20px;'>TRỊNH MINH HIẾU</h1>",
             unsafe_allow_html=True
@@ -119,7 +119,7 @@ def render_about_us():
         st.markdown("### Nhóm xin được gửi lời cảm ơn chân thành nhất đối với sự hướng dẫn và giảng dạy của TS. Nguyễn Tuấn Long về các kiến thức về lập trình căn bản với ngôn ngữ Python. ")
         st.markdown("### Những chỉ dạy của thầy sẽ mãi mãi là nền tảng quan trọng và là kim chỉ nam cho cả nhóm hoàn thành sản phẩm với kết quả như trên!!!❤️❤️❤️")
     with col11:
-        st.image(f"data:image/png;base64,{ThayLong}", use_container_width=True)
+        st.image(f"data:image/png;base64,{ThayLong}")
         st.markdown(
             "<h1 style='text-align: center; font-size: 20px;'>TS. NGUYỄN TUẤN LONG</h1>",
             unsafe_allow_html=True
