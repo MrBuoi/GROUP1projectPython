@@ -60,7 +60,7 @@ def record_study_time(user, time_spent):
 def display_pomodoro():
     # Main title
     st.markdown(
-        "<h1 style='color: white; text-align: center; font-size: 80px;'> FOCUS ZONE</h1>",
+        "<h1 style='color: #FFEDD5; text-align: center; font-size: 80px;'> FOCUS ZONE</h1>",
         unsafe_allow_html=True
     )
     # Timer countdown
@@ -128,7 +128,7 @@ def display_pomodoro():
 
     # Music Section
     st.markdown(
-        "<h1 style='color: white; font-size: 36px;'> Select Your Rhythm</h1>",
+        "<h1 style='color: #FFEDD5; font-size: 36px;'> Select Your Rhythm</h1>",
         unsafe_allow_html=True
     )
     current_dir = Path(__file__).parent # Lấy đường dẫn hiện tại
