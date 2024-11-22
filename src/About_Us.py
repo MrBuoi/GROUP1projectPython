@@ -25,7 +25,6 @@ def render_about_us():
     img_path6 = os.path.join(assets_dir, "Huong.png")
     img_path7 = os.path.join(assets_dir, "Hieu.png")
     img_path8 = os.path.join(assets_dir, "ThayLong.png")
-    img_path9 = os.path.join(assets_dir, "VuTru.png")
     # Chuyển ảnh thành Base64
     Tuan = get_img_as_base64(img_path1)
     Tung = get_img_as_base64(img_path2)

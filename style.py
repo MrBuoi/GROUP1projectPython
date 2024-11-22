@@ -302,11 +302,13 @@ def background11():
             data = f.read()
         encoded = base64.b64encode(data).decode()
         return encoded
+    
     current_dir = os.path.dirname(os.path.abspath(__file__))
     assets_dir = os.path.join(current_dir, 'assets')
     img5_path = os.path.join(assets_dir, '61.png')
     img5 = get_img_as_base64(img5_path)
-    # CSS tùy chỉnh cho nền và sidebar
+    
+    # CSS tùy chỉnh 
     page_bg_img = f"""
     <style>
     [data-testid="stAppViewContainer"] {{
@@ -400,15 +402,15 @@ def background65():
     """
     st.markdown(page_bg_img, unsafe_allow_html=True)
 def background66():
-    @st.cache_data
-    def get_img_as_base64(file):
-        with open(file, "rb") as f:
+    @st.cache_data #Dùng để cache kết quả, giảm thời gian xử lý khi hàm được gọi nhiều lần với cùng dữ liệu.
+    def get_img_as_base64(file): #Chuyển đổi một hình ảnh thành chuỗi mã hóa Base64 để có thể nhúng vào CSS.
+        with open(file, "rb") as f: #Đường dẫn tới file hình ảnh. Mở file dưới dạng nhị phân (rb).
             data = f.read()
-        encoded = base64.b64encode(data).decode()
+        encoded = base64.b64encode(data).decode() #Mã hóa dữ liệu hình ảnh thành Base64.
         return encoded
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    assets_dir = os.path.join(current_dir, 'assets')
-    img5_path = os.path.join(assets_dir, '662.png')
+    current_dir = os.path.dirname(os.path.abspath(__file__)) #Lấy thư mục hiện tại nơi file Python đang chạy.
+    assets_dir = os.path.join(current_dir, 'assets') #Kết hợp để tạo đường dẫn tới thư mục assets.
+    img5_path = os.path.join(assets_dir, '662.png') #Tạo đường dẫn đầy đủ tới file ảnh 662.png.
     img5 = get_img_as_base64(img5_path)
     # CSS tùy chỉnh cho nền và sidebar
     page_bg_img = f"""

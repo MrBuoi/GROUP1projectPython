@@ -1,4 +1,5 @@
 import streamlit as st
+
 from src.auth.auth import login, register
 from src.schedule.schedule_display import display_schedule
 from src.pomodoro.pomodoro_display import display_pomodoro
@@ -8,6 +9,7 @@ from src.schedule.Eisenhower import display_eisenhower_matrix  # Import hàm Eis
 from src.About_Us import render_about_us
 from src.pomodoro.pomodoro_report import report_display
 from src.Contact_Us import contact
+
 from style import css_full_app
 from style import hesen_background
 from style import background5
@@ -15,6 +17,7 @@ from style import background11
 from style import none
 from style import A
 from style import B
+
 # Thiết lập cấu hình trang (gọi một lần)
 st.set_page_config(
     page_title="Quản Lý Thời Gian và Lịch Trình",
@@ -22,11 +25,11 @@ st.set_page_config(
     layout="wide",
 )
 def main():
-    css_full_app()
+    css_full_app() #Ảnh side bar và hiệu ứng hover
     # Kiểm tra trạng thái đăng nhập trong session
-    if 'is_logged_in' not in st.session_state:
-        st.session_state['is_logged_in'] = False
-        st.session_state['username'] = ''
+    if 'is_logged_in' not in st.session_state: #to store and manage login state:
+        st.session_state['is_logged_in'] = False  #Tracks whether the user is logged in.
+        st.session_state['username'] = '' #Stores the logged-in user's name.
     # Menu lựa chọn giữa Đăng nhập và Đăng Ký
     menu = ["Sign In", "Sign Up", "Contact"]
     option = st.sidebar.selectbox("User Account", menu)
@@ -34,11 +37,11 @@ def main():
         background11()
         if option == "Sign In":
             if login():
-                st.session_state.is_logged_in = True
+                st.session_state['is_logged_in'] = True
         elif option == "Sign Up":
             register()
         elif option == "Contact":
-            none()
+            none() #ảnh background
             contact()
     else:
         # Hiển thị menu chính khi đã đăng nhập

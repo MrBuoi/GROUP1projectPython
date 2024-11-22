@@ -56,10 +56,13 @@ def register():
             return
         if not re.search(r'[a-z]', password):
             st.error("Mật khẩu phải chứa ít nhất 1 chữ cái in thường")
+            return
         if not re.search(r'[0-9]', password):
             st.error("Mật khẩu phải chứa ít nhất 1 chữ số")
+            return
         if not re.search(r'[A-Z]', password):
             st.error("Mật khẩu phải chứa ít nhất 1 chữ cái in hoa")
+            return
         
         if not re.search(r'[^a-zA-Z0-9]', password):
             st.error("Mật khẩu phải chứa ít nhất 1 ký tự đặc biệt.")

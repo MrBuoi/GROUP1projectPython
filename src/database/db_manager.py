@@ -1,7 +1,6 @@
 import json
 import os
 
-
 # Đường dẫn đầy đủ tới file users.json trong thư mục database
 USER_DATA_FILE = os.path.join(os.path.dirname(__file__), 'users.json')
 

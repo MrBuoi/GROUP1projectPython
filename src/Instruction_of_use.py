@@ -1,16 +1,11 @@
 import streamlit as st
-import requests
 import webbrowser
+
 from style import background63
 from style import background64
 from style import background65
 from style import background66
-# Hàm để tải nội dung Lottie từ URL
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+
 # Hàm để hiển thị nội dung "Hướng dẫn sử dụng"
 def instruction_of_use():
     st.header("⭐️Hướng Dẫn Sử Dụng Ứng Dụng Quản Lý Thời Gian và Lịch Trình")
@@ -41,22 +36,3 @@ def instruction_of_use():
     elif quanly == 'Thống kê thời gian tập trung học':
         background63()
         st.write("""Sau mỗi Pomodoro thì số phút bạn đã học được sẽ cộng vào với nhau, sau đó kết quả cuối cùng là số phút mà bạn đã học được trong ngày hôm ấy. Người dùng cũng có thể so sánh số phút học tập trung trong ngày so với ngày trước đã học""")
-    
-    # URL của hoạt hình Lottie thứ nhất
-    #lottie_url1 = "https://assets2.lottiefiles.com/packages/lf20_touohxv0.json"
-    #lottie_json1 = load_lottieurl(lottie_url1)
-    # Hiển thị hoạt hình Lottie thứ nhất
-    #st_lottie(
-        #lottie_json1,
-        #height=300,
-        #key="education_lottie",
-    #)
-    # URL của hoạt hình Lottie thứ hai (nếu cần)
-    #lottie_url2 = "https://assets2.lottiefiles.com/packages/lf20_x62chJ.json"
-    #lottie_json2 = load_lottieurl(lottie_url2)
-    # Hiển thị hoạt hình Lottie thứ hai
-    #st_lottie(
-        #lottie_json2,
-        #height=300,
-        #key="lottie",
-    #)

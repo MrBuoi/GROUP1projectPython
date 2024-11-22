@@ -17,6 +17,8 @@ def introduction():
     assets_dir = os.path.join(current_dir, "../assets")
     img_path9 = os.path.join(assets_dir, "VuTru.png")
     VuTru = get_img_as_base64(img_path9)
+    
+    
     #a, b, c = st.columns([2,22,2])
     #with b:
         #image2 = Image.open(r"assets/Title.png")
@@ -42,8 +44,10 @@ def introduction():
     **TIMELY – Khi bạn là phi hành gia của chính cuộc đời mình, hãy để thời gian làm bệ phóng cho những hành trình vĩ đại.**
     """)
     st.markdown("---")
+    
     with b:
         st.image(f"data:image/png;base64,{VuTru}", use_container_width=True)
+        
     cola, colb, colc = st.columns(3)
     st.markdown(
         "<h1 style='text-align: center; font-size: 80px;'>Các tính năng của TIMELY </h1>",

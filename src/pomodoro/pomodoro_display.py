@@ -14,8 +14,6 @@ def load_lottieurl(url: str):
     else:
         st.error("Không thể tải hoạt hình từ URL")
         return None
-
-
 lottie_url1 = "https://assets2.lottiefiles.com/packages/lf20_touohxv0.json"
 lottie_url2 = "https://lottie.host/fcc5c4c9-c08c-460e-b991-5ab983ca4ad1/wwJITddgjD.json"
 
@@ -132,9 +130,9 @@ def display_pomodoro():
     st.markdown("##  Select Your Rhythm")
 
 
-    # Lấy đường dẫn hiện tại
-    current_dir = Path(__file__).parent
-    assets_dir = current_dir / '../../assets'
+    
+    current_dir = Path(__file__).parent # Lấy đường dẫn hiện tại
+    assets_dir = current_dir / '../../assets' #Xác định thư mục assets
     assets_dir = assets_dir.resolve()   # Chuyển thành đường dẫn tuyệt đối
 
 

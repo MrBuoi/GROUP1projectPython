@@ -3,6 +3,8 @@ import json
 from datetime import datetime, timedelta
 
 
+
+
 # Đường dẫn tuyệt đối đến file schedule.json
 BASE_DIR = os.path.dirname(os.path.abspath("src/database/schedule.json"))
 SCHEDULE_FILE = os.path.join(BASE_DIR, "schedule.json")
@@ -20,6 +22,8 @@ def load_schedule(filename=SCHEDULE_FILE):
         return {}
 
 
+
+
 # Lưu lịch vào file
 def save_schedule(schedule, filename=SCHEDULE_FILE):
     # Tạo thư mục nếu chưa tồn tại
@@ -29,14 +33,18 @@ def save_schedule(schedule, filename=SCHEDULE_FILE):
         json.dump(schedule, file, indent=4)
 
 
+
+
 # Thêm thời gian biểu và có tùy chọn lặp lại hàng tuần
-def add_schedule(username, title, start_time, end_time, date, urgency, importance, note=""):
+def add_schedule(username, title, end_time, date, urgency, importance, note=""):
     # Tải lịch hiện tại
     schedule = load_schedule()
     
     # Kiểm tra nếu chưa có lịch cho username, tạo mới nếu cần
     if username not in schedule:
         schedule[username] = {}
+
+
 
 
     # Tạo event_id mới cho người dùng này
@@ -50,7 +58,6 @@ def add_schedule(username, title, start_time, end_time, date, urgency, importanc
     # Thêm sự kiện vào lịch của người dùng
     user_schedule[event_id] = {
         "title": title,
-        "start_time": start_time,
         "end_time": end_time,
         "date": date,
         "urgency": urgency,
@@ -63,6 +70,8 @@ def add_schedule(username, title, start_time, end_time, date, urgency, importanc
     return event_id
 
 
+
+
 # Xóa thời gian biểu của người dùng
 def delete_schedule(username, event_id):
     schedule = load_schedule()
@@ -71,6 +80,8 @@ def delete_schedule(username, event_id):
         save_schedule(schedule)
         return True
     return False
+
+
 
 
 # Lấy thời gian biểu của người dùng cho một ngày hoặc nhiều ngày
@@ -84,6 +95,8 @@ def get_schedule(username, date=None, days=1, sort_by=None):
     
     user_schedule = schedule[username]
     current_time = datetime.now()
+
+
 
 
     for event_id, event in user_schedule.items():
@@ -105,6 +118,9 @@ def get_schedule(username, date=None, days=1, sort_by=None):
     elif sort_by == "importance":
         selected_schedules.sort(key=lambda x: x["importance"], reverse=True)
     else:
-        selected_schedules.sort(key=lambda x: datetime.strptime(x["date"] + " " + x["start_time"], "%Y-%m-%d %H:%M"))
+        selected_schedules.sort(key=lambda x: datetime.strptime(x["date"] + " " + x["end_time"], "%Y-%m-%d %H:%M"))
     
     return selected_schedules
+
+
+
