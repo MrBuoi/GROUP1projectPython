@@ -8,7 +8,24 @@ def login():
     """
     Xử lý chức năng đăng nhập.
     """
-    st.subheader("Đăng Nhập")
+    st.markdown(
+        "<h1 style='color: white; text-align: center; font-size: 40px;'> Đăng Nhập </h1>",
+        unsafe_allow_html=True
+    )
+    # CSS để đổi màu chữ nhãn
+    st.markdown(
+    """
+    <style>
+    /* Đổi màu nhãn cho các trường nhập liệu */
+    .stTextInput > label {
+        color: yellow;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
     with st.form(key='login_form'):
         username = st.text_input("Tên đăng nhập", key="login_username").strip()
         password = st.text_input("Mật khẩu", type="password", key="login_password")
@@ -38,7 +55,10 @@ def register():
     """
     Xử lý chức năng đăng ký.
     """
-    st.subheader("Đăng Ký")
+    st.markdown(
+        "<h1 style='color: white; text-align: center; font-size: 40px;'> Đăng Ký </h1>",
+        unsafe_allow_html=True
+    )
     with st.form(key='register_form'):
         username = st.text_input("Tên đăng nhập", key="register_username").strip()
         password = st.text_input("Mật khẩu", type="password", key="register_password")
