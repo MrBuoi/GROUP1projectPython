@@ -6,7 +6,6 @@ streamlit_lottie
 requests
 cryptography
 matplotlib
-bcrypt==4.0.1
-python-3.10
+bcrypt
 cffi
 pycparser
