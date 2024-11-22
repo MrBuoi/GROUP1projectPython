@@ -17,6 +17,7 @@ from style import background11
 from style import none
 from style import A
 from style import B
+from style import sidebar
 
 # Thiết lập cấu hình trang (gọi một lần)
 st.set_page_config(
@@ -80,6 +81,7 @@ def main():
         elif main_menu == "Contact Us":
             none()
             contact()
+        sidebar()
         if st.sidebar.button("Log Out"):
             st.session_state['is_logged_in'] = False
             st.session_state['username'] = ''

@@ -284,7 +284,7 @@ def background63():
         return encoded
     current_dir = os.path.dirname(os.path.abspath(__file__))
     assets_dir = os.path.join(current_dir, 'assets')
-    img5_path = os.path.join(assets_dir, '63.png')
+    img5_path = os.path.join(assets_dir, '631.png')
     img5 = get_img_as_base64(img5_path)
     # CSS tùy chỉnh cho nền và sidebar
     page_bg_img = f"""
@@ -311,7 +311,7 @@ def background64():
         return encoded
     current_dir = os.path.dirname(os.path.abspath(__file__))
     assets_dir = os.path.join(current_dir, 'assets')
-    img5_path = os.path.join(assets_dir, '641.png')
+    img5_path = os.path.join(assets_dir, '6411.png')
     img5 = get_img_as_base64(img5_path)
     # CSS tùy chỉnh cho nền và sidebar
     page_bg_img = f"""
@@ -338,7 +338,7 @@ def background65():
         return encoded
     current_dir = os.path.dirname(os.path.abspath(__file__))
     assets_dir = os.path.join(current_dir, 'assets')
-    img5_path = os.path.join(assets_dir, '65.png')
+    img5_path = os.path.join(assets_dir, '651.png')
     img5 = get_img_as_base64(img5_path)
     # CSS tùy chỉnh cho nền và sidebar
     page_bg_img = f"""
@@ -365,7 +365,7 @@ def background66():
         return encoded
     current_dir = os.path.dirname(os.path.abspath(__file__)) #Lấy thư mục hiện tại nơi file Python đang chạy.
     assets_dir = os.path.join(current_dir, 'assets') #Kết hợp để tạo đường dẫn tới thư mục assets.
-    img5_path = os.path.join(assets_dir, '662.png') #Tạo đường dẫn đầy đủ tới file ảnh 662.png.
+    img5_path = os.path.join(assets_dir, '6.png') #Tạo đường dẫn đầy đủ tới file ảnh 662.png.
     img5 = get_img_as_base64(img5_path)
     # CSS tùy chỉnh cho nền và sidebar
     page_bg_img = f"""
@@ -509,3 +509,29 @@ def css_timetable():
     """,
     unsafe_allow_html=True
 )
+def sidebar():
+    @st.cache_data
+    def get_img_as_base64(file):
+        with open(file, "rb") as f:
+            data = f.read()
+        encoded = base64.b64encode(data).decode()
+        return encoded
+
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    assets_dir = os.path.join(current_dir, 'assets')
+    sidebar_bg_base64_path = os.path.join(assets_dir, 'hihiii.png')
+    sidebar_bg_base64  = get_img_as_base64(sidebar_bg_base64_path)
+    sidebar_bg_base65_path = os.path.join(assets_dir, 'hahu.png')
+    sidebar_bg_base65  = get_img_as_base64(sidebar_bg_base65_path)
+    # CSS tùy chỉnh cho sidebar
+    # HTML để hiển thị ảnh logo trong sidebar
+    logo_html = f'''
+    <div style="text-align: center; padding: 50px 0;">
+        <img src="data:image/png;base64,{sidebar_bg_base64}" style="width: 100%; height: auto;">
+        <img src="data:image/png;base64,{sidebar_bg_base65}" style="width: 100%; height: auto;">
+    </div>
+    '''
+
+    st.sidebar.markdown(logo_html, unsafe_allow_html=True)
+
+
