@@ -13,7 +13,7 @@ def instruction_of_use():
     st.write("")
     st.write("")
     st.markdown(
-        "<h1 style='color: white; font-size: 40px;'> ⭐️Hướng Dẫn Sử Dụng Ứng Dụng Quản Lý Thời Gian và Lịch Trình</h1>",
+        "<h1 style='color: white; font-size: 40px;'> Hướng Dẫn Sử Dụng Ứng Dụng Quản Lý Thời Gian và Lịch Trình</h1>",
         unsafe_allow_html=True
     )
     quanly = st.selectbox("",['Đăng nhập và Đăng ký', 'Bảng lịch trình thời gian biểu', 'Đồng hồ Pomodoro','Sử dụng ma trận Eisenhower','Thống kê thời gian tập trung học'])
