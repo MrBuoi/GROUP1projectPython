@@ -34,7 +34,7 @@ if "email" not in st.session_state:
 
 def contact():
     st.markdown(
-        "<h1 style='text-align: center; font-size: 80px;'>📋 Form Liên hệ trực tuyến</h1>",
+        "<h1 style='color: white; text-align: center; font-size: 80px;'> 📋 Form Liên hệ trực tuyến </h1>",
         unsafe_allow_html=True
     )
     
@@ -58,8 +58,13 @@ def contact():
             else:
                 st.error("Vui lòng điền đầy đủ thông tin trước khi gửi!")
 
-
-    st.markdown("## ❗️Nếu bạn có bất kỳ câu hỏi hoặc cần hỗ trợ, xin vui lòng liên hệ với chúng tôi qua Hotline : 0886619869❗️")
+    st.markdown(
+        "<h1 style='color: white; text-align: center; font-size: 40px;'> ❗️Nếu bạn có bất kỳ câu hỏi hoặc cần hỗ trợ, xin vui lòng liên hệ với chúng tôi qua Hotline : 0886619869❗️ </h1>",
+        unsafe_allow_html=True
+    )
     # Footer
     st.markdown("---")
-    st.write("© 2024 AppName - All Rights Reserved")
+    st.markdown(
+        "<h1 style='color: white; font-size: 20px;'> © 2024 TIMELY - All Rights Reserved </h1>",
+        unsafe_allow_html=True
+    )
