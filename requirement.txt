@@ -4,8 +4,8 @@ pandas
 plotly
 streamlit_lottie
 requests
-cryptography
 matplotlib
-bcrypt
+bcrypt==4.0.1
 cffi
 pycparser
+cryptography
