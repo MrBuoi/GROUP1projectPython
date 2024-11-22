@@ -30,19 +30,14 @@ def introduction():
         "<h1 style='color: white; font-size: 80px;'>TIMELY </h1>",
         unsafe_allow_html=True
     )
-        st.markdown("### Cỗ máy thời gian của những nhà khai phá vũ trụ")
-        st.write("""
-
-    Hãy tưởng tượng bạn là một phi hành gia, đang bước vào vùng không gian bao la – nơi mà từng giây phút đều quý giá như ngọc ngà, và mỗi quyết định đều có thể thay đổi quỹ đạo của cả hành trình. TIMELY chính là cỗ máy thời gian đồng hành, giúp bạn định hướng giữa các vì sao, vạch lối trên hành trình khám phá không giới hạn.
-
-    Vũ trụ của bạn có thể là công việc, là những giấc mơ ấp ủ, hay những mục tiêu đầy thách thức. TIMELY sẽ trở thành bản đồ sao – nơi từng khoảnh khắc đều được tính toán để tối ưu hóa. Với TIMELY, bạn không chỉ quản lý thời gian, mà còn biến nó thành nhiên liệu, đẩy bạn bay xa hơn qua những khoảng không vô tận của khả năng.
-
-    Trên hành trình ấy, bạn sẽ không còn cảm thấy lạc lối. TIMELY không chỉ giúp bạn bước qua những chặng đường đơn độc mà còn giúp bạn cảm nhận sâu sắc giá trị của từng phút giây. Đó không chỉ là việc "sống" qua ngày, mà là cách bạn "khai phá" từng giây phút – để mỗi ngày trở thành một cuộc phiêu lưu đáng nhớ.
-
-    Hãy bước vào khoang tàu của TIMELY, nơi thời gian không còn là giới hạn, mà trở thành đôi cánh đưa bạn chạm đến những giấc mơ xa xôi nhất.
-
-    **TIMELY – Khi bạn là phi hành gia của chính cuộc đời mình, hãy để thời gian làm bệ phóng cho những hành trình vĩ đại.**
-    """)
+        st.markdown(
+        "<h1 style='color: white; font-size: 40px;'>Cỗ máy thời gian của những nhà khai phá vũ trụ </h1>",
+        unsafe_allow_html=True
+    )
+        st.markdown(
+        "<h6 style='color: white; font-size: 18px;'>Hãy tưởng tượng bạn là một phi hành gia, đang bước vào vùng không gian bao la – nơi mà từng giây phút đều quý giá như ngọc ngà, và mỗi quyết định đều có thể thay đổi quỹ đạo của cả hành trình. TIMELY chính là cỗ máy thời gian đồng hành, giúp bạn định hướng giữa các vì sao, vạch lối trên hành trình khám phá không giới hạn. Vũ trụ của bạn có thể là công việc, là những giấc mơ ấp ủ, hay những mục tiêu đầy thách thức. TIMELY sẽ trở thành bản đồ sao – nơi từng khoảnh khắc đều được tính toán để tối ưu hóa. Với TIMELY, bạn không chỉ quản lý thời gian, mà còn biến nó thành nhiên liệu, đẩy bạn bay xa hơn qua những khoảng không vô tận của khả năng. Trên hành trình ấy, bạn sẽ không còn cảm thấy lạc lối. TIMELY không chỉ giúp bạn bước qua những chặng đường đơn độc mà còn giúp bạn cảm nhận sâu sắc giá trị của từng phút giây. Đó không chỉ là việc SỐNG qua ngày, mà là cách bạn KHAI PHÁ từng giây phút – để mỗi ngày trở thành một cuộc phiêu lưu đáng nhớ. Hãy bước vào khoang tàu của TIMELY, nơi thời gian không còn là giới hạn, mà trở thành đôi cánh đưa bạn chạm đến những giấc mơ xa xôi nhất. TIMELY – Khi bạn là phi hành gia của chính cuộc đời mình, hãy để thời gian làm bệ phóng cho những hành trình vĩ đại. </h1>",
+        unsafe_allow_html=True
+    )
     st.markdown("---")
     
     with b:
@@ -50,9 +45,10 @@ def introduction():
         
     cola, colb, colc = st.columns(3)
     st.markdown(
-        "<h1 style='text-align: center; font-size: 80px;'>Các tính năng của TIMELY </h1>",
-        unsafe_allow_html=True
-    )
+    "<h1 style='color: white; text-align: center; font-size: 80px;'>Các tính năng của TIMELY </h1>",
+    unsafe_allow_html=True
+)
+
     with cola:
         pass 
     st.write("")
@@ -65,10 +61,10 @@ def introduction():
         with mid:
             st.markdown("<h4 style='color: yellow;'> FOCUS ZONE</h3>", unsafe_allow_html=True)
             st.write("")
-            st.write("")
-        st.markdown("""
-                            ##### Sử dụng đồng hồ Pomodoro để tập trung tối đa trong khoảng thời gian làm việc ngắn. Kết hợp với nhạc nền Lofi để tăng hiệu quả làm việc. Hiển thị đồng hồ đếm ngược và nhắc nhở nghỉ ngơi đúng lúc.
-                        """)
+        st.markdown(
+        "<h1 style='color: white; text-align: center; font-size: 20px;'> Sử dụng đồng hồ Pomodoro để tập trung tối đa trong khoảng thời gian làm việc ngắn. Kết hợp với nhạc nền Lofi để tăng hiệu quả làm việc. Hiển thị đồng hồ đếm ngược và nhắc nhở nghỉ ngơi đúng lúc </h1>",
+        unsafe_allow_html=True
+    )
     with cold:
         image1 = Image.open(r"assets/Focus Zone.png")
         st.image(image1,caption="""Tập trung tối đa: Phương pháp Pomodoro kết hợp với nhạc thư giãn.
@@ -88,10 +84,10 @@ def introduction():
             st.markdown("<h4 style='color: yellow;'> LỊCH TRÌNH THÔNG MINH</h3>", unsafe_allow_html=True)
             st.write("")
             st.write("")
-        st.markdown("""
-            ##### Thêm lịch trình cá nhân hoặc công việc chỉ với vài bước đơn giản. Sắp xếp nhiệm vụ theo mức độ quan trọng và khẩn cấp. Xem các lịch trình sắp tới dưới dạng bảng trực quan.
-
-            """)
+        st.markdown(
+        "<h1 style='color: white; text-align: center; font-size: 20px;'> Thêm lịch trình cá nhân hoặc công việc chỉ với vài bước đơn giản. Sắp xếp nhiệm vụ theo mức độ quan trọng và khẩn cấp. Xem các lịch trình sắp tới dưới dạng bảng trực quan </h1>",
+        unsafe_allow_html=True
+    )
     with col3:
         st.write("")
         st.write("")
@@ -116,9 +112,10 @@ def introduction():
         with m:
             st.markdown("<h4 style='color: yellow;'> BẢNG LỊCH TRÌNH</h3>", unsafe_allow_html=True)
             st.write("")
-        st.markdown("""
-            ##### Xây dựng hệ thống công việc với từng mức độ công việc cụ thể. Tuỳ chọn sắp xếp theo các tiêu chí
-             """)
+        st.markdown(
+        "<h1 style='color: white; text-align: center; font-size: 20px;'> Xây dựng hệ thống công việc với từng mức độ công việc cụ thể. Tuỳ chọn sắp xếp theo các tiêu chí </h1>",
+        unsafe_allow_html=True
+    )
     with col2:
         st.write("")
         st.write("")
@@ -144,9 +141,10 @@ def introduction():
         with m:
             st.markdown("<h4 style='color: yellow;'> MA TRẬN EISENHOWER</h3>", unsafe_allow_html=True)
             st.write("")
-        st.markdown("""
-            ##### Giúp bạn phân loại công việc dựa trên ma trận "Quan trọng - Khẩn cấp", dễ dàng xác định thứ tự ưu tiên cho từng nhiệm vụ.
-             """)
+        st.markdown(
+        "<h1 style='color: white; text-align: center; font-size: 20px;'> Giúp bạn phân loại công việc dựa trên ma trận Quan trọng - Khẩn cấp, dễ dàng xác định thứ tự ưu tiên cho từng nhiệm vụ </h1>",
+        unsafe_allow_html=True
+    )
     with col2:
         st.write("")
         st.write("")
@@ -171,9 +169,10 @@ def introduction():
         with m:
             st.markdown("<h4 style='color: yellow;'> THỐNG KÊ THỜI GIAN TẬP TRUNG HỌC</h3>", unsafe_allow_html=True)
             st.write("")
-        st.markdown("""
-            ##### Đây là công cụ để kiểm tra xem năng suất học tập trung của người dùng là bao nhiêu, từ đó người dùng có thể nắm bắt được tình trạng học của bản thân.
-             """)
+        st.markdown(
+        "<h1 style='color: white; text-align: center; font-size: 20px;'> Đây là công cụ để kiểm tra xem năng suất học tập trung của người dùng là bao nhiêu, từ đó người dùng có thể nắm bắt được tình trạng học của bản thân </h1>",
+        unsafe_allow_html=True
+    )
     with col2:
         st.write("")
         st.write("")
@@ -189,7 +188,7 @@ def introduction():
     with w:
         st.write("")
         st.markdown(
-        "<h1 style='text-align: center; font-size: 40px;'>THỜI GIAN QUÝ GIÁ - HÃY ĐỂ TIMELY GIÚP BẠN TẬN DỤNG ĐIỀU ĐÓ</h1>",
+        "<h1 style='color: white; text-align: center; font-size: 40px;'> THỜI GIAN QUÝ GIÁ - HÃY ĐỂ TIMELY GIÚP BẠN TẬN DỤNG ĐIỀU ĐÓ </h1>",
         unsafe_allow_html=True
     )
     a, b, c = st.columns(3)
