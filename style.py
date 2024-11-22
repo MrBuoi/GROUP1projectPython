@@ -531,7 +531,6 @@ def sidebar():
         <img src="data:image/png;base64,{sidebar_bg_base65}" style="width: 100%; height: auto;">
     </div>
     '''
-
     st.sidebar.markdown(logo_html, unsafe_allow_html=True)
 
 

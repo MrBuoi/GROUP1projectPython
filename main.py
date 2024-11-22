@@ -44,6 +44,7 @@ def main():
         elif option == "Contact":
             none() #ảnh background
             contact()
+        sidebar()
     else:
         # Hiển thị menu chính khi đã đăng nhập
         st.sidebar.success(f"Welcome: {st.session_state['username']}!")
