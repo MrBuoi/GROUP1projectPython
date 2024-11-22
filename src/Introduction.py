@@ -72,7 +72,7 @@ def introduction():
     with cold:
         image1 = Image.open(r"assets/Focus Zone.png")
         st.image(image1,caption="""Tập trung tối đa: Phương pháp Pomodoro kết hợp với nhạc thư giãn.
-""",use_container_width= True)
+""")
     col4,col3 = st.columns(2)
     with col4:
         st.write("")
@@ -101,7 +101,7 @@ def introduction():
         st.write("")
         image = Image.open(r'assets/Lịch  trình thời gian.png')
         st.image(image,caption= """Dễ dàng lập kế hoạch: Tạo lịch trình nhanh chóng và rõ ràng.
-""",use_container_width= True)
+""")
     col2,col1 = st.columns(2)
     with col1:
         st.write("")
@@ -128,7 +128,7 @@ def introduction():
         st.write("")
         image = Image.open(r'assets/Lịch trình.png')
         st.image(image,caption= """Lịch trình rành mạch ,dễ nhìn : Tạo động lực hoàn thành việc làm.
-""",use_container_width= True)
+""")
     col1,col2 = st.columns(2)
     with col1:
         st.write("")
@@ -156,7 +156,7 @@ def introduction():
         st.write("")
         image = Image.open(r'assets/n_eisen.PNG')
         st.image(image,caption= """Ưu tiên hợp lý: Dựa vào mức độ quan trọng và khẩn cấp để ra quyết định.
-""",use_container_width= True)
+""")
     col2,col1 = st.columns(2)
     with col1:
         st.write("")
@@ -183,7 +183,7 @@ def introduction():
         st.write("")
         image = Image.open(r'assets/Thống kê thời gian.png')
         st.image(image,caption= """Số liệu rõ ràng: Thống kê tình trạng học tập trung học.
-""",use_container_width= True)
+""")
     st.markdown("---")
     q,w,e = st.columns([1,10,1])
     with w:
